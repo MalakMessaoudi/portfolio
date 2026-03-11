@@ -69,30 +69,18 @@ export const profileData = {
     },
     experiences: [
         {
-            title: "Full Stack Developer (Laravel/Vue.js)",
-            company_name: "Ark-x Talent Solutions",
+            title: "Full Stack Developer (Internship)",
+            company_name: "Ark-x Talent Solutions, Oujda",
             icon: "freelance",
             iconBg: "#383E56",
             date: "Oct 2025 - Feb 2026",
             points: [
-                "Development of an e-commerce website for a tourist guide, including user profile management, hotel and restaurant appointments, and activity planning.",
-                "Collaboration with the team to optimize user experience and application performance.",
+                "Development of high-performance and interactive web features for an e-commerce platform.",
+                "Optimization of user experience and responsive interfaces for various tourism services.",
+                "Collaborative work in an agile team to deliver scalable web solutions.",
+                "Improving overall application performance and speed through code optimization.",
             ],
-            tech: ["PHP", "Laravel", "MySQL", "HTML", "CSS", "Git", "GitHub", "Vue.js"]
-        },
-        {
-            title: "PHP Web Developer (Internship / Supervised Project)",
-            company_name: "CHU",
-            icon: "agency",
-            iconBg: "#E6DEDD",
-            date: "Mar 2025 - Apr 2025",
-            points: [
-                "Creation of a user interface with React and CSS to display patient medical information.",
-                "Implementation of an online appointment booking system (choice of date, time, and doctor).",
-                "Management of patient data and appointments via a MySQL database.",
-                "Work on a supervised project in an academic context.",
-            ],
-            tech: ["React", "PHP", "MySQL", "HTML", "CSS", "Git", "GitHub", "Postman"]
+            tech: ["PHP", "Laravel", "Vue.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "MySQL", "PgAdmin", "Git", "GitHub", "Postman"]
         },
     ],
     services: [
@@ -166,6 +154,21 @@ export const profileData = {
                 "Search Wonders",
                 "Interactive Map",
                 "Trip Planner"
+            ]
+        },
+        {
+            id: "chu-medical",
+            title: "CHU Medical",
+            description: "A comprehensive medical interface for managing patient records and online appointments, developed as a supervised project in an academic context.",
+            tags: ["React", "PHP", "MySQL", "HTML", "CSS", "Git", "GitHub", "Postman"],
+            link: "/projects/chu-medical",
+            images: [],
+            adminImages: [],
+            features: [
+                "Patient Medical Info Dashboard",
+                "Online Appointment Booking System",
+                "Patient Data Management",
+                "Academic Supervised Project"
             ]
         },
     ],
