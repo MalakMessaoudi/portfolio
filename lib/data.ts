@@ -154,6 +154,7 @@ export const profileData = {
                 "Search Wonders",
                 "Interactive Map",
                 "Trip Planner"
+                
             ]
         },
         {
