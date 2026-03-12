@@ -82,6 +82,20 @@ export const profileData = {
             ],
             tech: ["PHP", "Laravel", "Vue.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "MySQL", "PgAdmin", "Git", "GitHub", "Postman"]
         },
+        {
+            title: "PHP Web Developer (Internship)",
+            company_name: "CHU, Oujda",
+            icon: "agency",
+            iconBg: "#E6DEDD",
+            date: "Mar 2025 - Apr 2025",
+            points: [
+                "Development of an intuitive and responsive web interface for patient management.",
+                "Implementation of a secure and efficient online appointment booking system.",
+                "Reliable data management with a focus on privacy and security.",
+                "API integration and testing to ensure smooth system communication.",
+            ],
+            tech: ["React.js", "HTML5", "CSS3", "MySQL", "Git", "GitHub", "Postman"]
+        },
     ],
     services: [
         {
@@ -154,7 +168,7 @@ export const profileData = {
                 "Search Wonders",
                 "Interactive Map",
                 "Trip Planner"
-                
+
             ]
         },
         {
