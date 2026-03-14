@@ -98,39 +98,38 @@ export function Projects() {
                     </h2>
                 </motion.div>
 
-                <div className="relative h-[600px] flex items-center justify-center perspective-1000">
+                <div className="relative h-[650px] md:h-[600px] flex items-center justify-center perspective-1000">
                     {/* Navigation Buttons */}
                     <button
                         onClick={prevSlide}
-                        className="absolute left-4 md:left-10 z-[100] p-3 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-md text-white transition-all transform hover:scale-110 flex items-center justify-center shadow-lg border border-white/20"
+                        className="absolute left-1 md:left-10 z-[100] p-2 md:p-3 rounded-full bg-white/10 hover:bg-white/30 backdrop-blur-md text-white transition-all transform hover:scale-110 flex items-center justify-center shadow-lg border border-white/10"
                     >
-                        <ChevronLeft size={32} />
+                        <ChevronLeft className="w-6 h-6 md:w-8 md:h-8" />
                     </button>
                     <button
                         onClick={nextSlide}
-                        className="absolute right-4 md:right-10 z-[100] p-3 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-md text-white transition-all transform hover:scale-110 flex items-center justify-center shadow-lg border border-white/20"
+                        className="absolute right-1 md:right-10 z-[100] p-2 md:p-3 rounded-full bg-white/10 hover:bg-white/30 backdrop-blur-md text-white transition-all transform hover:scale-110 flex items-center justify-center shadow-lg border border-white/10"
                     >
-                        <ChevronRight size={32} />
+                        <ChevronRight className="w-6 h-6 md:w-8 md:h-8" />
                     </button>
 
                     {/* Cards */}
-                    <div className="relative w-full max-w-lg h-full flex items-center justify-center perspective-container">
+                    <div className="relative w-full max-w-[280px] sm:max-w-md h-full flex items-center justify-center perspective-container">
                         {projects.map((project, index) => {
-                            const style = getCardStyle(index);
-                            // Fix for 2 items specific logic: active gets offset 0. Other one gets offset 1.
-                            // But let's check exact indices for the 2-item case
                             let xVal = 0;
                             let scaleVal = 1;
                             let zIndexVal = 10;
                             let opacityVal = 1;
                             let rotateYVal = 0;
 
+                            const spacing = isMobile ? 280 : 320;
+
                             if (projects.length === 2) {
                                 if (index === activeIndex) {
                                     // Center
                                 } else {
                                     // Put it to the right
-                                    xVal = 300;
+                                    xVal = spacing;
                                     scaleVal = 0.8;
                                     zIndexVal = 5;
                                     opacityVal = 0.5;
@@ -146,17 +145,20 @@ export function Projects() {
                                     else offset += len;
                                 }
 
-                                xVal = offset * 320; // 320px spacing
+                                xVal = offset * spacing;
                                 scaleVal = 1 - Math.abs(offset) * 0.15;
                                 zIndexVal = 10 - Math.abs(offset);
                                 opacityVal = Math.abs(offset) > 1 ? 0 : 1 - Math.abs(offset) * 0.4;
                                 rotateYVal = offset * -15;
                             }
 
-                            // Override for 2 items to force the 'other' one to be visible but pushed back
+                            // Force the 'other' one to be visible but pushed back for 2 items
                             if (projects.length === 2 && index !== activeIndex) {
-                                // To make it look like a carousel, just put it to the "next" position visually
-                                xVal = 250; scaleVal = 0.85; zIndexVal = 5; opacityVal = 0.6; rotateYVal = -15;
+                                xVal = isMobile ? 60 : 250;
+                                scaleVal = isMobile ? 0.8 : 0.85;
+                                zIndexVal = 5;
+                                opacityVal = isMobile ? 0.4 : 0.6;
+                                rotateYVal = -15;
                             }
 
                             return (
@@ -176,7 +178,7 @@ export function Projects() {
                                     style={{ transformStyle: "preserve-3d" }}
                                 >
                                     {/* Card Content */}
-                                    <div className="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 shadow-2xl h-[550px] flex flex-col">
+                                    <div className="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 shadow-2xl h-[580px] md:h-[550px] flex flex-col">
 
                                         {/* Top Image Part */}
                                         <div className="h-[250px] w-full relative bg-[#050816] group">

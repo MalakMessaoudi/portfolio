@@ -38,7 +38,7 @@ export function Header() {
                         window.scrollTo(0, 0);
                     }}
                 >
-                    <span className="text-2xl font-bold tracking-tighter text-white">
+                    <span className="text-xl md:text-2xl font-bold tracking-tighter text-white">
                         Malak Messaoudi
                     </span>
                 </a>

@@ -49,13 +49,13 @@ export function Hero() {
                     transition={{ duration: 0.8 }}
                     className="flex flex-col items-center"
                 >
-                    <span className="text-xl md:text-2xl text-[#aaa6c3] tracking-wider mb-2">
+                    <span className="text-lg md:text-xl lg:text-2xl text-[#aaa6c3] tracking-wider mb-2">
                         Hi, my name is
                     </span>
-                    <h1 className="text-7xl md:text-9xl font-black tracking-tighter text-white uppercase mb-2">
+                    <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-black tracking-tighter text-white uppercase mb-2">
                         {profileData.name}
                     </h1>
-                    <p className="text-sm md:text-base text-[#aaa6c3] tracking-[0.3em] font-medium uppercase">
+                    <p className="text-xs sm:text-sm md:text-base text-[#aaa6c3] tracking-[0.3em] font-medium uppercase">
                         {profileData.role}.
                     </p>
                 </motion.div>

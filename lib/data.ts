@@ -56,13 +56,15 @@ export const profileData = {
             { name: "React", icon: "react" },
             { name: "Tailwind CSS", icon: "tailwind" },
             { name: "Figma", icon: "figma" },
+            { name: "Vue.js", icon: "vue" },    
         ],
         backend: [
             { name: "PHP", icon: "php" },
             { name: "Laravel", icon: "laravel" },
+            { name: "Postman", icon: "postman" },
         ],
         databases: [
-            { name: "MongoDB", icon: "mongodb" },
+
             { name: "PostgreSQL", icon: "postgresql" },
             { name: "MySQL", icon: "mysql" },
         ],
@@ -153,7 +155,8 @@ export const profileData = {
             title: "Travelo",
             description: "Discover the Magic of Morocco. From the golden dunes of the Sahara to the blue streets of Chefchaouen, experience an unforgettable journey through Morocco's wonders.",
             tags: ["Laravel", "Vue.js", "HTML", "CSS", "GitHub", "Design Patterns"],
-            link: "/projects/travelo",
+            liveUrl: "", // Add live URL if available
+            repoUrl: "https://github.com/Travelo-web-app/",
             images: [
                 "/images/projects/travelo/project/image.png",
                 "/images/projects/travelo/project/image copy.png",
